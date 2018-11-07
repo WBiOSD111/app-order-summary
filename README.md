@@ -9,7 +9,7 @@
 
 First of many apps created by following the [iOS 12 & Swift 4: From Beginner to Paid Professional](https://www.udemy.com/devslopes-ios12/learn/v4/content) course on Udemy by Mark Price.
 
-![Order Summary App](TagsListPage.png) ![Order Summary App](ProductsListPage.png)
+<img alt="product-tags-screen" src="products-tags.jpg" width="200"><img alt="product-detailed-screen" src="products-detailed.jpg" width="200"><img alt="order-list-screen" src="orders-list.jpg" width="200"><img alt="order-detailed-screen" src="orders-detailed.jpg" width="200">
 
 ## Features
 
