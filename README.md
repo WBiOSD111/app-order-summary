@@ -7,7 +7,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/LFAlertController.svg?style=flat)](http://cocoapods.org/pods/LFAlertController)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-Shopify's iOS Mobile Internship Challenge of [Fall 2018] & [Winter 2019]() combined.
+Shopify's iOS Mobile Internship Challenge of Fall 2018 & Winter 2019 combined.
 
 <img alt="product-tags-screen" src="products-tags.jpg" width="200"><img alt="product-detailed-screen" src="products-detailed.jpg" width="200"><img alt="order-list-screen" src="orders-list.jpg" width="200"><img alt="order-detailed-screen" src="orders-detailed.jpg" width="200">
 
