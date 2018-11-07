@@ -7,22 +7,28 @@
 [![Platform](https://img.shields.io/cocoapods/p/LFAlertController.svg?style=flat)](http://cocoapods.org/pods/LFAlertController)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-First of many apps created by following the [iOS 12 & Swift 4: From Beginner to Paid Professional](https://www.udemy.com/devslopes-ios12/learn/v4/content) course on Udemy by Mark Price.
+Shopify's iOS Mobile Internship Challenge of Fall 2018 & Winter 2019 combined.
 
 <img alt="product-tags-screen" src="products-tags.jpg" width="200"><img alt="product-detailed-screen" src="products-detailed.jpg" width="200"><img alt="order-list-screen" src="orders-list.jpg" width="200"><img alt="order-detailed-screen" src="orders-detailed.jpg" width="200">
 
 ## Features
 
-- [x] Intro to Auto Layout 
-- [x] Working with UIStackView
-- [x] Intro to segues (storyboard and programmatically)
-- [x] IBActions & data models
-- [x] Passing data between view controllers
+- [x] Displays an Order Summary Page
+- [x] Orders are sorted by province and year
+- [x] Displays a list of products tags
+- [x] Products are sorted by tags
 
 ## Build
 
 - iOS 11.0
 - Xcode 9.4.1
+
+## Libraries
+
+- [Alamofire](https://github.com/Alamofire/Alamofire)
+- [Alamofire Image](https://github.com/Alamofire/AlamofireImage)
+- [Swifty JSON](https://github.com/SwiftyJSON/SwiftyJSON)
+- [SwiftIcons](https://github.com/ranesr/SwiftIcons)
 
 ## Meta
 
