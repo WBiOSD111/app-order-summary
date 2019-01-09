@@ -20,7 +20,7 @@ class ProductListTableViewCell: UITableViewCell {
     
 }
 
-class ProductListTableViewController: UITableViewController {
+class ProductListTableVC: UITableViewController {
     
     // MARK: Properties
     

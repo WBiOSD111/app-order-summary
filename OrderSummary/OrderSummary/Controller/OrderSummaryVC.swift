@@ -11,7 +11,7 @@ import SwiftyJSON
 import Alamofire
 import SwiftIcons
 
-class OrderSummaryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class OrderSummaryVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let kHeaderSectionTag: Int = 6900;
     
@@ -50,7 +50,7 @@ class OrderSummaryViewController: UIViewController, UITableViewDelegate, UITable
         
         self.navigationController?.navigationBar.barTintColor = UIColor.colorWithHexString(hexStr: "#393e46")
         self.navigationController?.navigationBar.tintColor = .white
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         self.navigationController?.navigationBar.isTranslucent = false
         
         // Setup tabbar
@@ -155,7 +155,7 @@ class OrderSummaryViewController: UIViewController, UITableViewDelegate, UITable
         // make headers touchable
         header.tag = section
         let headerTapGesture = UITapGestureRecognizer()
-        headerTapGesture.addTarget(self, action: #selector(OrderSummaryViewController.sectionHeaderWasTouched(_:)))
+        headerTapGesture.addTarget(self, action: #selector(OrderSummaryVC.sectionHeaderWasTouched(_:)))
         header.addGestureRecognizer(headerTapGesture)
     }
     
@@ -207,7 +207,7 @@ class OrderSummaryViewController: UIViewController, UITableViewDelegate, UITable
         loadingLabel.frame = CGRect(x: 0, y: 0, width: 140, height: 30)
         
         // Sets spinner
-        spinner.activityIndicatorViewStyle = .white
+        spinner.style = .white
         spinner.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
         spinner.startAnimating()
         
@@ -325,7 +325,7 @@ class OrderSummaryViewController: UIViewController, UITableViewDelegate, UITable
                     indexesPath.append(index)
                 }
                 self.tableView!.beginUpdates()
-                self.tableView!.deleteRows(at: indexesPath, with: UITableViewRowAnimation.fade)
+                self.tableView!.deleteRows(at: indexesPath, with: UITableView.RowAnimation.fade)
                 self.tableView!.endUpdates()
             }
         
@@ -352,7 +352,7 @@ class OrderSummaryViewController: UIViewController, UITableViewDelegate, UITable
                 }
                 self.expandedSectionHeaderNumber = section
                 self.tableView!.beginUpdates()
-                self.tableView!.insertRows(at: indexesPath, with: UITableViewRowAnimation.fade)
+                self.tableView!.insertRows(at: indexesPath, with: UITableView.RowAnimation.fade)
                 self.tableView!.endUpdates()
             
             

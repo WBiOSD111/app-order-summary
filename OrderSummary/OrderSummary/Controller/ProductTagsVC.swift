@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 import SwiftIcons
 
-class ProductTagsViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class ProductTagsVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     // MARK: - Properties
     
@@ -60,7 +60,7 @@ class ProductTagsViewController: UICollectionViewController, UICollectionViewDel
         
         self.navigationController?.navigationBar.barTintColor = UIColor.colorWithHexString(hexStr: "#393e46")
         self.navigationController?.navigationBar.tintColor = .white
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         self.navigationController?.navigationBar.isTranslucent = false
     }
     
@@ -101,7 +101,7 @@ class ProductTagsViewController: UICollectionViewController, UICollectionViewDel
         loadingLabel.frame = CGRect(x: 0, y: 0, width: 140, height: 30)
         
         // Sets spinner
-        spinner.activityIndicatorViewStyle = .white
+        spinner.style = .white
         spinner.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
         spinner.startAnimating()
         
@@ -230,7 +230,7 @@ class ProductTagsViewController: UICollectionViewController, UICollectionViewDel
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         if segue.identifier == "productListSegue" {
-            let productListVC = segue.destination as! ProductListTableViewController
+            let productListVC = segue.destination as! ProductListTableVC
             if let cell = sender as? UICollectionViewCell
             {
                 let indexPath = cell.tag

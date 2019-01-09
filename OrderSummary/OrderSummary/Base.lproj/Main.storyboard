@@ -1,26 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="t9M-FW-dhj">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="t9M-FW-dhj">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Order Summary View Controller-->
+        <!--Order SummaryVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="OrderSummaryViewController" customModule="OrderSummary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="OrderSummaryVC" customModule="OrderSummary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hMC-mh-B0U">
-                                <rect key="frame" x="16" y="79" width="343" height="29"/>
+                                <rect key="frame" x="20" y="79" width="560" height="29"/>
                                 <segments>
                                     <segment title="By Province"/>
                                     <segment title="By Year"/>
@@ -31,7 +26,7 @@
                                 </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0GY-sg-mIp">
-                                <rect key="frame" x="0.0" y="123" width="375" height="495"/>
+                                <rect key="frame" x="0.0" y="123" width="600" height="428"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="WLR-dq-Z0D"/>
@@ -60,12 +55,12 @@
             </objects>
             <point key="canvasLocation" x="1902" y="30"/>
         </scene>
-        <!--Product Tags View Controller-->
+        <!--Product TagsVC-->
         <scene sceneID="C0P-0K-rq1">
             <objects>
-                <collectionViewController id="ONu-C9-O1d" customClass="ProductTagsViewController" customModule="OrderSummary" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="ONu-C9-O1d" customClass="ProductTagsVC" customModule="OrderSummary" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="peH-2i-w1s">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TPi-ZT-Sgt">
@@ -115,42 +110,42 @@
             </objects>
             <point key="canvasLocation" x="1902" y="793"/>
         </scene>
-        <!--Product List Table View Controller-->
+        <!--Product List TableVC-->
         <scene sceneID="Sc5-cv-qlP">
             <objects>
-                <tableViewController id="3zw-bA-CME" customClass="ProductListTableViewController" customModule="OrderSummary" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="3zw-bA-CME" customClass="ProductListTableVC" customModule="OrderSummary" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wWa-bg-9RY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="productListCell" rowHeight="152" id="Jvd-eU-GW0" customClass="ProductListTableViewCell" customModule="OrderSummary" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="152"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="152"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jvd-eU-GW0" id="g3f-Fc-Lxd">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="151.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="151.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="rsR-wS-ecF">
-                                            <rect key="frame" x="16" y="11" width="343" height="130"/>
+                                            <rect key="frame" x="20" y="11" width="560" height="130"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ia7-40-bhE">
-                                                    <rect key="frame" x="0.0" y="0.0" width="171.5" height="130"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="280" height="130"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zis-X5-D1k">
-                                                            <rect key="frame" x="0.0" y="0.0" width="171.5" height="50"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndV-xs-H2J">
-                                                            <rect key="frame" x="0.0" y="50" width="171.5" height="38.5"/>
+                                                            <rect key="frame" x="0.0" y="50" width="280" height="38.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inventory" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJ1-78-a5p">
-                                                            <rect key="frame" x="0.0" y="88.5" width="171.5" height="41.5"/>
+                                                            <rect key="frame" x="0.0" y="88.5" width="280" height="41.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -172,7 +167,7 @@
                                                     </constraints>
                                                 </stackView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="muU-q3-9tw">
-                                                    <rect key="frame" x="171.5" y="0.0" width="171.5" height="130"/>
+                                                    <rect key="frame" x="280" y="0.0" width="280" height="130"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
