@@ -80,8 +80,9 @@ class ProductTagsVC: UICollectionViewController, UICollectionViewDelegateFlowLay
         self.tabBarController?.tabBar.tintColor = UIColor.darkGrayTheme
         
         // Setting icons to each tab bar item
-        self.tabBarController?.tabBar.items?[0].setIcon(icon: .dripicon(.tags), size: nil, textColor: .lightGray)
-        self.tabBarController?.tabBar.items?[1].setIcon(icon: .dripicon(.cart), size: nil, textColor: .lightGray)
+        self.tabBarController?.tabBar.items?[0].setIcon(icon: .dripicon(.viewListLarge), size: nil, textColor: .lightGray)
+        self.tabBarController?.tabBar.items?[1].setIcon(icon: .dripicon(.tags), size: nil, textColor: .lightGray)
+        self.tabBarController?.tabBar.items?[2].setIcon(icon: .dripicon(.cart), size: nil, textColor: .lightGray)
         
     }
     
@@ -153,7 +154,7 @@ class ProductTagsVC: UICollectionViewController, UICollectionViewDelegateFlowLay
                     // Convert the tags into a String Array
                     let productTagsArray = productTags.components(separatedBy: ", ").filter {!$0.isEmpty}
                     
-                    let product = Product.init(productId: productId!, productTitle: productTitle, productSubTitle: productSubTitle, productTags: productTagsArray, productVariants: productVariants!, productInventory: productInventory, productImageURL: productImageURL)
+                    let product = Product.init(id: productId!, title: productTitle, subTitle: productSubTitle, tags: productTagsArray, variants: productVariants!, inventory: productInventory, imageURL: productImageURL)
                     self.productData.append(product)
                     
                     
@@ -172,7 +173,7 @@ class ProductTagsVC: UICollectionViewController, UICollectionViewDelegateFlowLay
         
         // Create the dictionary product tag as keys.
         for d in self.productData {
-            let dataKeys = d.productTags
+            let dataKeys = d.tags
             
             for dataKey in dataKeys {
                 
@@ -195,7 +196,7 @@ class ProductTagsVC: UICollectionViewController, UICollectionViewDelegateFlowLay
         for d in self.dataDictionary {
             let dataKey = d.key
             let dataValues = self.dataDictionary[dataKey]
-            self.dataDictionary[dataKey] = dataValues?.sorted(by: { $0.productId > $1.productId })
+            self.dataDictionary[dataKey] = dataValues?.sorted(by: { $0.id > $1.id })
         }
         
     }

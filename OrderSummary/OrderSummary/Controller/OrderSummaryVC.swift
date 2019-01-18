@@ -366,8 +366,9 @@ class OrderSummaryVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.tabBarController?.tabBar.tintColor = UIColor.darkGrayTheme
         
         // Setting icons to each tab bar item
-        self.tabBarController?.tabBar.items?[0].setIcon(icon: .dripicon(.tags), size: nil, textColor: .lightGray)
-        self.tabBarController?.tabBar.items?[1].setIcon(icon: .dripicon(.cart), size: nil, textColor: .lightGray)
+        self.tabBarController?.tabBar.items?[0].setIcon(icon: .dripicon(.viewListLarge), size: nil, textColor: .lightGray)
+        self.tabBarController?.tabBar.items?[1].setIcon(icon: .dripicon(.tags), size: nil, textColor: .lightGray)
+        self.tabBarController?.tabBar.items?[2].setIcon(icon: .dripicon(.cart), size: nil, textColor: .lightGray)
         
     }
 }

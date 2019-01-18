@@ -61,8 +61,9 @@ class ProductListTableVC: UITableViewController {
         self.tabBarController?.tabBar.tintColor = UIColor.darkGrayTheme
         
         // Setting icons to each tab bar item
-        self.tabBarController?.tabBar.items?[0].setIcon(icon: .dripicon(.tags), size: nil, textColor: .lightGray)
-        self.tabBarController?.tabBar.items?[1].setIcon(icon: .dripicon(.cart), size: nil, textColor: .lightGray)
+        self.tabBarController?.tabBar.items?[0].setIcon(icon: .dripicon(.viewListLarge), size: nil, textColor: .lightGray)
+        self.tabBarController?.tabBar.items?[1].setIcon(icon: .dripicon(.tags), size: nil, textColor: .lightGray)
+        self.tabBarController?.tabBar.items?[2].setIcon(icon: .dripicon(.cart), size: nil, textColor: .lightGray)
         
     }
     
@@ -87,9 +88,9 @@ class ProductListTableVC: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "productListCell", for: indexPath) as! ProductListTableViewCell
         
         // Configure the cell...
-        cell.productTitleLabel.text = productListData[indexPath.row].productTitle
-        cell.productSubtitleLabel.text = productListData[indexPath.row].productSubTitle
-        cell.productInventoryLabel.text = "Inventory: " + String(productListData[indexPath.row].productInventory)
+        cell.productTitleLabel.text = productListData[indexPath.row].title
+        cell.productSubtitleLabel.text = productListData[indexPath.row].subTitle
+        cell.productInventoryLabel.text = "Inventory: " + String(productListData[indexPath.row].inventory)
         
         // Fetch image cell
         fetchImage(cell: cell, indexPath: indexPath)
@@ -103,7 +104,7 @@ class ProductListTableVC: UITableViewController {
     
     func fetchImage(cell: ProductListTableViewCell, indexPath: IndexPath) {
 
-        Alamofire.request(productListData[indexPath.row].productImageURL).responseImage { response in
+        Alamofire.request(productListData[indexPath.row].imageURL).responseImage { response in
             
             if let image = response.result.value {
                 cell.productImage.image = image

@@ -1,0 +1,11 @@
+framework module SwiftIcons {
+  umbrella header "SwiftIcons.h"
+
+  export *
+  module * { export * }
+}
+
+module SwiftIcons.Swift {
+    header "SwiftIcons-Swift.h"
+    requires objc
+}

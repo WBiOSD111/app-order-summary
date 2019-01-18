@@ -1,0 +1,5 @@
+github "Alamofire/Alamofire"
+github "Alamofire/AlamofireImage"
+github "SwiftyJSON/SwiftyJSON"
+github "ranesr/SwiftIcons"
+github "Shopify/FunctionalTableData"

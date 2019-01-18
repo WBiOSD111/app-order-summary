@@ -1,0 +1,18 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "2.3.2",
+  "iOS" : [
+    {
+      "name" : "SwiftIcons",
+      "hash" : "d6adb1d9fedf776ff2ba08a68e742d0c4deadc00652876a464534d64f03b8c55"
+    }
+  ]
+}

@@ -10,12 +10,12 @@ import Foundation
 import SwiftyJSON
 
 struct Product {
-    let productId: Int,
-    productTitle: String,
-    productSubTitle: String,
-    productTags: [String],
-    productVariants: [JSON],
-    productInventory: Int,
-    productImageURL: String
+    let id: Int,
+    title: String,
+    subTitle: String,
+    tags: [String],
+    variants: [JSON],
+    inventory: Int,
+    imageURL: String
 
 }
