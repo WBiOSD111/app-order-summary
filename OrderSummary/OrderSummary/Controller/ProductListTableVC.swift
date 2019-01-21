@@ -36,6 +36,7 @@ class ProductListTableVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //productListData = ProductService.instance.products
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         

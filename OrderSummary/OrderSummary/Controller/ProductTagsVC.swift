@@ -56,7 +56,7 @@ class ProductTagsVC: UICollectionViewController, UICollectionViewDelegateFlowLay
     
     func setupNavigationUI() {
         // Setup navigation
-        self.navigationItem.title = "Products"
+        self.navigationItem.title = "Product Tags"
         
         self.navigationController?.navigationBar.barTintColor = UIColor.colorWithHexString(hexStr: "#393e46")
         self.navigationController?.navigationBar.tintColor = .white

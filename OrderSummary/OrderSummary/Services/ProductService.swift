@@ -14,11 +14,12 @@ class ProductService {
     
     static let instance = ProductService()
     
-    var collects = [Collect]()
+    var collects = [Int]()
     var products = [Product]()
     
     func findAllCollects(collectionId: Int, completion: @escaping CompletionHandler) {
-        Alamofire.request(COLLECTS + "page=1&access_token=" + AuthService.instance.authToken)
+        collects.removeAll()
+        Alamofire.request(COLLECTS + "collection_id=\(collectionId)&page=1&access_token=" + AuthService.instance.authToken)
             .validate(statusCode: 200..<300)
             .validate(contentType: ["application/json"])
             .responseJSON { response in
@@ -31,7 +32,7 @@ class ProductService {
                 
                 _ = JSON(value)["collects"].array!.map { json in
                     let productId = json["product_id"].intValue
-                    let collect = Collect.init(productId: productId)
+                    let collect = productId
                     self.collects.append(collect)
                     
                 }
@@ -42,8 +43,14 @@ class ProductService {
     
     //https://shopicruit.myshopify.com/admin/products.json?ids=2759137027,2759143811&page=1&access_token=c32313df0d0ef512ca64d5b336a0d7c6
     
-    func findAllProducts(productIds: [Collect], completion: @escaping CompletionHandler ) {
-        Alamofire.request(PRODUCTS + "page=1&access_token=" + AuthService.instance.authToken)
+    func findAllProducts(productIds: [Int], completion: @escaping CompletionHandler ) {
+        products.removeAll()
+        var productIdsString = ""
+        for productId in productIds {
+            productIdsString += "\(productId),"
+        }
+        
+        Alamofire.request(PRODUCTS + "ids=\(productIdsString)&page=1&access_token=" + AuthService.instance.authToken)
             .validate(statusCode: 200..<300)
             .validate(contentType: ["application/json"])
             .responseJSON { response in
@@ -77,14 +84,14 @@ class ProductService {
                     let product = Product.init(id: productId, title: productTitle, subTitle: productSubTitle, tags: productTagsArray, variants: productVariants, inventory: productInventory, imageURL: productImageURL)
                     self.products.append(product)
                     
-                    
                 }
                 
                 //self.sort()
+                completion(true)
                     
                 }
                 
-                completion(true)
+        
         
     }
 }

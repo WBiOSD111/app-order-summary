@@ -20,6 +20,9 @@
 		1A6E698B21F2675C002D7895 /* FunctionalTableData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6E698621F2675C002D7895 /* FunctionalTableData.framework */; };
 		1A6E698C21F2675C002D7895 /* SwiftIcons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6E698721F2675C002D7895 /* SwiftIcons.framework */; };
 		1A6E698D21F2675C002D7895 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6E698821F2675C002D7895 /* AlamofireImage.framework */; };
+		1A6E699021F50DE8002D7895 /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6E698F21F50DE8002D7895 /* CollectionTableViewCell.swift */; };
+		1A6E699221F50F6D002D7895 /* LabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6E699121F50F6D002D7895 /* LabelCell.swift */; };
+		1A6E699421F53C9E002D7895 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6E699321F53C9E002D7895 /* Extensions.swift */; };
 		1A7BAB8D21EF761A00C46A02 /* CollectionTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7BAB8C21EF761A00C46A02 /* CollectionTableVC.swift */; };
 		1A7D0BA921E6B56400DED4EA /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7D0BA821E6B56400DED4EA /* Collection.swift */; };
 		1AA463E021498B0900B648E2 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA463DF21498B0900B648E2 /* Product.swift */; };
@@ -48,6 +51,9 @@
 		1A6E698621F2675C002D7895 /* FunctionalTableData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FunctionalTableData.framework; path = Carthage/Build/iOS/FunctionalTableData.framework; sourceTree = "<group>"; };
 		1A6E698721F2675C002D7895 /* SwiftIcons.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftIcons.framework; path = Carthage/Build/iOS/SwiftIcons.framework; sourceTree = "<group>"; };
 		1A6E698821F2675C002D7895 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
+		1A6E698F21F50DE8002D7895 /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
+		1A6E699121F50F6D002D7895 /* LabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCell.swift; sourceTree = "<group>"; };
+		1A6E699321F53C9E002D7895 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		1A7BAB8C21EF761A00C46A02 /* CollectionTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableVC.swift; sourceTree = "<group>"; };
 		1A7D0BA821E6B56400DED4EA /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		1AA463DF21498B0900B648E2 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -103,11 +109,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1A6E698E21F50DC1002D7895 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1A6E698F21F50DE8002D7895 /* CollectionTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1AB8C00A20FA7E5200C8F631 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				1AB8C00B20FA7E6400C8F631 /* UIColor.swift */,
 				1A31A57921E69FA200BF283D /* Constants.swift */,
+				1A6E699321F53C9E002D7895 /* Extensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -132,6 +147,7 @@
 		1AD423D920F7924000A1C7EF /* OrderSummary */ = {
 			isa = PBXGroup;
 			children = (
+				1A6E698E21F50DC1002D7895 /* View */,
 				1AF8347B21E67B1800614A9C /* Services */,
 				1A09B71121528B9C00BB5AF7 /* Controller */,
 				1AB8C00A20FA7E5200C8F631 /* Utilities */,
@@ -151,6 +167,7 @@
 			children = (
 				1AD423ED20F7963300A1C7EF /* CustomCell.swift */,
 				1AD423EE20F7963300A1C7EF /* CustomCell.xib */,
+				1A6E699121F50F6D002D7895 /* LabelCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -317,7 +334,9 @@
 				1AD423EF20F7963300A1C7EF /* CustomCell.swift in Sources */,
 				1AF8857020F8ED1100FA4D69 /* Order.swift in Sources */,
 				1A7D0BA921E6B56400DED4EA /* Collection.swift in Sources */,
+				1A6E699421F53C9E002D7895 /* Extensions.swift in Sources */,
 				1A31A58021E6A4DD00BF283D /* ProductService.swift in Sources */,
+				1A6E699021F50DE8002D7895 /* CollectionTableViewCell.swift in Sources */,
 				1A31A57E21E6A2F000BF283D /* AuthService.swift in Sources */,
 				1AD423DB20F7924000A1C7EF /* AppDelegate.swift in Sources */,
 				1A31A58221E6A4EF00BF283D /* OrderService.swift in Sources */,
@@ -325,6 +344,7 @@
 				1A31A57C21E6A2D600BF283D /* CollectionService.swift in Sources */,
 				1AA463E021498B0900B648E2 /* Product.swift in Sources */,
 				1A31A57A21E69FA200BF283D /* Constants.swift in Sources */,
+				1A6E699221F50F6D002D7895 /* LabelCell.swift in Sources */,
 				1A7BAB8D21EF761A00C46A02 /* CollectionTableVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
